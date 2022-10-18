@@ -3,6 +3,6 @@ channels:
   - defaults
 dependencies:
   - pip>=22.2.2
-  - python>=3.10.6=hbb2ffb3_0
-  - setuptools=>63.4.1
+  - python>=3.10.6
+  - setuptools>=63.4.1
 prefix: C:\Users\M\.conda\envs\kinkajou

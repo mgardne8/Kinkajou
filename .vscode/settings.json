@@ -1,0 +1,12 @@
+{
+    "python.analysis.completeFunctionParens": true,
+    "[python]": {
+        "editor.defaultFormatter": "ms-python.black-formatter"
+    },
+    "python.formatting.provider": "black",
+    "editor.formatOnSave": true,
+    "editor.formatOnPaste": true,
+    "python.defaultInterpreterPath": "~\\.conda\\envs\\Kinkajou\\python.exe",
+    "python.analysis.inlayHints.functionReturnTypes": true,
+    "git.autofetch": true
+}
