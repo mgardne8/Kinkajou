@@ -14,8 +14,8 @@ Misc variables:
 
 """
 
-from __future__ import annotations
 
 from .objects import *
+from .functions import *
 
 __version__ = "0.0.1"
