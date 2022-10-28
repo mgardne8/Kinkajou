@@ -44,10 +44,7 @@ def cage_csv(infile: str, has_header: bool = True, encoding: str = None) -> Data
     except Exception as exc:
         raise CagingError from exc
 
-    print(header)
-    print(data[0])
-
-    res = DataCage(header=header, data=data)
+    res = DataCage(header, data)
 
     return res
 
@@ -59,7 +56,6 @@ def uncage_csv(cage: DataCage, outfile: str) -> None:
         cage (DataCage): cage to open
         outfile (str): relative path to relase the cage into
 
-    Raises:
-        NotImplementedError: _description_
+    TODO: write DataCage to CSV export function
     """
     raise NotImplementedError
