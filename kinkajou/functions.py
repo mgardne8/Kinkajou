@@ -19,8 +19,7 @@ def cage_csv(infile: str, has_header: bool = True, encoding: str = None) -> Data
     Args:
         infile (str): relative path to csv file to cage
         has_header (bool, optional): Generates header if one doesn't exist. Defaults to True.
-        encoding (str): encoding type of csv file. Defaults to None
-            (Attempts to automatically detect)
+        encoding (str): encoding type of csv file. Defaults to None (Attempts to automatically detect)
 
     Raises:
         CagingError: Was unable to Cage the data - it continues to run free.

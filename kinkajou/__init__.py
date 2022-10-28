@@ -6,7 +6,8 @@ Classes:
 
 Functions:
 
-    Cage()
+    cage_csv()
+    uncage_csv()
 
 Misc variables:
 
@@ -18,4 +19,4 @@ Misc variables:
 from .objects import DataCage
 from .functions import *
 
-__version__ = "0.0.1"
+__version__ = "0.0.1a"
