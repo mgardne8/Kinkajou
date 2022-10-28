@@ -33,3 +33,7 @@ for x in range(1, len(list(data.header))):
 
 print("Updated Head(3) of file:")
 data.head(3)
+
+# test printing from columns and rows
+print(f"\nValues from Column(0):\n{list(data.column(0))}")
+print(f"\nValues from Row(0):\n{list(data.row(0))}")

@@ -1,4 +1,4 @@
-"""Create and Analayze DataCage objects.
+"""Create, Manipulate, and Analayze DataCage objects.
 
 Classes:
 

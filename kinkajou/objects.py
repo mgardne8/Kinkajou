@@ -1,5 +1,7 @@
-"""Core kinkajou objects
-This module contains the core objects for the kinkajou library
+"""Core kinkajou objects.
+
+This module contains the core objects for the kinkajou library.
+Currently this consists of only the abstract KinkajouClass class and the main DataCage class.
 
 TODO:
     Module Documentation
@@ -36,7 +38,7 @@ class DataCage(KinkajouClass):
 
     @property
     def header(self: DataCage) -> list:
-        """Return iterable object of headers"""
+        """Yields iterable object of headers"""
         return (x for x in self._header)
 
     @header.setter
@@ -57,7 +59,7 @@ class DataCage(KinkajouClass):
         Args:
             column (int | str): either index or header of column to fetch
 
-        Returns:
+        Yields:
             iterable: iterable generator of values from column
         """
         if isinstance(column, str):
@@ -65,12 +67,24 @@ class DataCage(KinkajouClass):
 
         return (row[column] for row in self._data)
 
+    def row(self: DataCage, row: int) -> Iterable:
+        """Returns iterable object containing all values from a row
+
+        Args:
+            row (int): index of row to fetch
+
+        Yields:
+            Iterable: iterable generator of values from row
+        """
+        return (data for data in self._data[row])
+
     def modify_column(self: DataCage, column: int | str, operation: Callable) -> None:
         """Modify a column in the datacage through provided Lambda function
 
         Args:
             Column (int | str): either index or header of column to modify
             operation (Callable): lambda function to map to column
+
         """
         if isinstance(column, str):
             column = self._header.index(column)
@@ -86,7 +100,7 @@ class DataCage(KinkajouClass):
             self._data[index][column] = value
 
     def head(self: DataCage, rows: int = 5) -> None:
-        """Print the first <rows> from your datacage
+        """Print header and first <rows> from datacage
 
         Args:
             rows (int, optional): Number of Rows(lists) to print. Defaults to 5.
@@ -96,7 +110,7 @@ class DataCage(KinkajouClass):
             print(row)
 
     def tail(self: DataCage, rows: int = 5) -> None:
-        """Print the last <rows> from your datacage
+        """Print header and last <rows> from datacage
 
         Args:
             rows (int, optional): Number of Rows(lists) to print. Defaults to 5.
