@@ -1,12 +1,9 @@
-"""Core kinkajou objects.
+""" This module contains the core objects for the kinkajou library.
 
-This module contains the core objects for the kinkajou library.
 Currently this consists of only the abstract KinkajouClass class and the main DataCage class.
-
-TODO:
-    Module Documentation
 """
 
+# TODO: Objects Module documentation
 
 from __future__ import annotations
 from typing import Callable, Iterable
@@ -17,11 +14,9 @@ class KinkajouClass:
 
 
 class DataCage(KinkajouClass):
-    """DataCage object
+    """DataCage object"""
 
-    TODO:
-        DataCage Documentation
-    """
+    # TODO: DataCage class documentation
 
     def __init__(self: DataCage, header: list, data: list) -> None:
         self._header = header
@@ -29,16 +24,18 @@ class DataCage(KinkajouClass):
 
     def __str__(self: DataCage) -> str:
         raise NotImplementedError
+        # TODO: Implement __str__ for DataCage
 
     def __repr__(self: DataCage) -> str:
         raise NotImplementedError
+        # TODO: Implement __repr__ for DataCage
 
     def __len__(self: DataCage) -> int:
         return len(self._data)
 
     @property
-    def header(self: DataCage) -> list:
-        """Yields iterable object of headers"""
+    def header(self: DataCage) -> Iterable:
+        """Yields Iterable object of headers"""
         return (x for x in self._header)
 
     @header.setter
@@ -51,24 +48,26 @@ class DataCage(KinkajouClass):
             if right column(s) are empty - remove them
             else raise error (can-not delete non-empty columns through setting headers)
         """
+        # TODO: Header.setter logic (see docstring)
         self._header = newheader
 
     def column(self: DataCage, column: int | str = 0) -> Iterable:
-        """Return iterable object containing all values from a column
+        """Yields iterable object containing all values from a column
 
         Args:
             column (int | str): either index or header of column to fetch
 
         Yields:
-            iterable: iterable generator of values from column
+            Iterable: iterable generator of values from column
         """
         if isinstance(column, str):
             column = self._header.index(column)
+        # TODO: Add exception handling when column header string is not valid (column)
 
         return (row[column] for row in self._data)
 
     def row(self: DataCage, row: int) -> Iterable:
-        """Returns iterable object containing all values from a row
+        """Yields iterable object containing all values from a row
 
         Args:
             row (int): index of row to fetch
@@ -79,15 +78,17 @@ class DataCage(KinkajouClass):
         return (data for data in self._data[row])
 
     def modify_column(self: DataCage, column: int | str, operation: Callable) -> None:
-        """Modify a column in the datacage through provided Lambda function
+        """Modify a column in the datacage through provided Callable
 
         Args:
             Column (int | str): either index or header of column to modify
-            operation (Callable): lambda function to map to column
-
+            operation (Callable): Callable to map to column
         """
+        # TODO: add example code to modify_column function
+
         if isinstance(column, str):
             column = self._header.index(column)
+        # TODO: Add exception handling when column header string is not valid (modify_column)
 
         # get an interable of our column values
         original_data = self.column(column)
@@ -98,6 +99,17 @@ class DataCage(KinkajouClass):
         # replace our old values with our new modified values
         for index, value in enumerate(working_data):
             self._data[index][column] = value
+
+    def filter(self: DataCage, opeartion: Callable) -> Iterable:
+        """return rows that match checks set in provided Callable
+
+        Args:
+            opeartion (Callable): Callable to run against each row
+
+        Yields:
+            Iterable: all rows that return True for callable
+        """
+        return (row for row in self._data if opeartion(row))
 
     def head(self: DataCage, rows: int = 5) -> None:
         """Print header and first <rows> from datacage
