@@ -30,7 +30,7 @@ Run scripts or notebooks from respective directories, or import kinkajou to your
  * import kinkajou
  * load a csv file without headers
  * add 69 to all values in the second column
- * print all columns where column 2 < 80
+ * print all rows where column 2 < 80
 
 ```python
 import kinkajou as kj
@@ -40,7 +40,7 @@ data = kj.cage_csv('./testdata.csv',has_header=False)
 data.modify_column(1,(lambda x: x + 69))
 
 for row in data.filter((lambda x: x[1] < 80))
-    print(row)
+    print(row) 
 
 # output:
 # ['row_01', 72, 'APPLE']
