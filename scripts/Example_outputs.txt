@@ -1,0 +1,89 @@
+PS D:\SCHOOL\INF405\Assignment Two\Kinkajou> & C:/Users/M/.conda/envs/Kinkajou/python.exe "d:/SCHOOL/INF405/Assignment Two/Kinkajou/scripts/ipa2.py"
+╔════ Welcome to the US Tution Statistics Data Query Tool
+║
+╟──┬─Please Make a selection:
+║  ├─ 1: Full US Data        
+║  ├─ 2: Query Specific State
+║  ├─ 3: Exit the program    
+║  └───> 1
+║
+╟──┬─ United States
+║  ├─ Average tutition: $7899.25
+║  ├─ Average yearly tuition increase: $264.36
+║  └─┬─Predicted tutions / based on...        
+║    ├─┬─ 1 year out:
+║    │ ├─ Last tuition increase: $9597.78     
+║    │ └─ Avrg tuition increase: $9581.94     
+║    └─┬─ 2 years out:
+║      ├─ Last tuition increase: $9877.98     
+║      ├─ Avrg last 2 increases: $9687.32     
+║      └─ Avrg tuition increase: $9846.30     
+║
+╟──┬─Please Make a selection:
+║  ├─ 1: Full US Data
+║  ├─ 2: Query Specific State
+║  ├─ 3: Exit the program
+║  └───> 2
+║
+╟──┬─Please enter state name:
+║  └───> new york
+║
+╟──┬─ New York
+║  ├─ Average tutition: $6479.33
+║  ├─ Average yearly tuition increase: $128.09
+║  └─┬─Predicted tutions / based on...        
+║    ├─┬─ 1 year out:
+║    │ ├─ Last tuition increase: $7982.00     
+║    │ └─ Avrg tuition increase: $7772.09     
+║    └─┬─ 2 years out:
+║      ├─ Last tuition increase: $8320.00     
+║      ├─ Avrg last 2 increases: $8212.00     
+║      └─ Avrg tuition increase: $7900.18     
+║
+╟──┬─Please Make a selection:
+║  ├─ 1: Full US Data
+║  ├─ 2: Query Specific State
+║  ├─ 3: Exit the program
+║  └───> 2
+║
+╟──┬─Please enter state name:
+║  └───> AlAsKa
+║
+╟──┬─ Alaska
+║  ├─ Average tutition: $5479.92
+║  ├─ Average yearly tuition increase: $203.91
+║  └─┬─Predicted tutions / based on...
+║    ├─┬─ 1 year out:
+║    │ ├─ Last tuition increase: $6993.00
+║    │ └─ Avrg tuition increase: $6774.91
+║    └─┬─ 2 years out:
+║      ├─ Last tuition increase: $7415.00
+║      ├─ Avrg last 2 increases: $7130.00
+║      └─ Avrg tuition increase: $6978.82
+║
+╟──┬─Please Make a selection:
+║  ├─ 1: Full US Data
+║  ├─ 2: Query Specific State
+║  ├─ 3: Exit the program
+║  └───> new alaska!
+║
+╟──INVALID INPUT
+║
+╟──┬─Please Make a selection:
+║  ├─ 1: Full US Data
+║  ├─ 2: Query Specific State
+║  ├─ 3: Exit the program
+║  └───> 2
+║
+╟──┬─Please enter state name:
+║  └───> newer alaska?
+║
+╟──INVALID STATE
+║
+╟──┬─Please Make a selection:
+║  ├─ 1: Full US Data
+║  ├─ 2: Query Specific State
+║  ├─ 3: Exit the program
+║  └───> 3
+║
+╚════ Good Bye!
